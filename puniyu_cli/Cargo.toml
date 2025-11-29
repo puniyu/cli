@@ -23,6 +23,11 @@ include = [
 name = "puniyu-cli"
 path = "src/main.rs"
 
+[package.metadata.binstall]
+pkg-url = "{ repo }/releases/download/cli-v{ version }/{ name }-{ target }.{ archive-format }"
+bin-dir = "{ bin }{ binary-ext }"
+pkg-fmt = "zip"
+
 [dependencies]
 clap = { version = "4.5.51", features = ["derive"] }
 handlebars = "6.3.2"

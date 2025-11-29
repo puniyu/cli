@@ -1,22 +1,31 @@
-mod command;
+mod commands;
 mod template;
 
-use clap::{Parser, Subcommand};
-use include_dir::{Dir, include_dir};
+use clap::{CommandFactory, Parser, Subcommand};
+use include_dir::{include_dir, Dir};
 
 pub(crate) static TEMPLATE_DIR: Dir<'_> = include_dir!("$CARGO_MANIFEST_DIR/template");
 
+pub(crate) const HELP_TEMPLATE: &str = "{about-with-newline}\n使用方法:\n  {usage}\n\n命令:\n{subcommands}\n选项:\n  -h, --help  显示帮助信息\n";
+
+
 #[derive(Parser)]
 #[clap(author, version, about, long_about = None)]
+#[command(
+    disable_help_subcommand = true,
+    help_template = HELP_TEMPLATE
+)]
 pub struct App {
     #[command(subcommand)]
-    dev: Commands,
+    command: Commands,
 }
 
 #[derive(Subcommand)]
 enum Commands {
-    Create,
-    Dev,
+    /// 开发相关命令
+    Dev(commands::dev::DevCommand),
+    /// 显示帮助信息
+    Help,
 }
 
 impl App {
@@ -26,9 +35,9 @@ impl App {
         T: Into<std::ffi::OsString> + Clone,
     {
         let app = Self::parse_from(args);
-        match app.dev {
-            Commands::Create => command::create::Command::run(),
-            Commands::Dev => command::dev::Command::run(),
+        match app.command {
+            Commands::Dev(dev_cmd) => dev_cmd.run(),
+            Commands::Help => Self::command().print_help().unwrap()
         }
     }
 }
