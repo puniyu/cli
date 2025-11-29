@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/puniyu/cli/compare/cli-v0.2.1...cli-v0.2.2) (2025-11-29)
+
+
+### 🎡 持续集成
+
+* 修正构建产物 ([c339ccd](https://github.com/puniyu/cli/commit/c339ccda255a9e5f730fe2db691d79efc9928f76))
+
 ## [0.2.1](https://github.com/puniyu/cli/compare/cli-v0.2.0...cli-v0.2.1) (2025-11-29)
 
 
