@@ -4,7 +4,7 @@ on:
   workflow_call:
 
 env:
-  APP_NAME: puniyu-cli
+  APP_NAME: cargo-puniyu
 
 jobs:
   build_windows:
