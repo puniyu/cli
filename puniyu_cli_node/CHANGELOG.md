@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/puniyu/cli/compare/node-v0.2.1...node-v0.2.2) (2025-11-29)
+
+
+### 🔧 其他更新
+
+* **node:** Synchronize puniyu-cli versions
+
 ## [0.2.1](https://github.com/puniyu/cli/compare/node-v0.2.0...node-v0.2.1) (2025-11-29)
 
 
