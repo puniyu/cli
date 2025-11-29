@@ -1,6 +1,6 @@
 [package]
 name = "puniyu_cli_node"
-version = "0.1.2"
+version = "0.1.1"
 authors.workspace = true
 license.workspace = true
 readme.workspace = true
