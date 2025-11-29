@@ -124,7 +124,7 @@ jobs:
           pnpm run create-npm-dirs
           pnpm run artifacts
           pnpm publish --access public
-        working-directory: nipaw_node
+        working-directory: puniyu_cli_node
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 

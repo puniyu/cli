@@ -2,4 +2,6 @@
 
 import { run } from "./dist/index.js"
 
-run(process.argv.slice(1))
+(() => {
+  run(process.argv.slice(1))
+})()

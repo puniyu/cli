@@ -1,4 +1,4 @@
-name: Build Node Package
+name: Build Rust Package
 
 on:
   workflow_call:

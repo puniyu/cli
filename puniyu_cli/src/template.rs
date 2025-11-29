@@ -25,7 +25,7 @@ impl Template {
 	pub fn render(&self) -> String {
 		let mut handlebars = Handlebars::new();
 		let template_str = crate::TEMPLATE_DIR
-			.get_file("Cargo.toml")
+			.get_file("Cargo.toml.template")
 			.unwrap()
 			.contents_utf8()
 			.unwrap();

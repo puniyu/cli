@@ -1,6 +1,7 @@
 [package]
 name = "puniyu-cli"
-version = "0.1.0"
+version = "0.1.1"
+description = "puniyu cli"
 authors.workspace = true
 license.workspace = true
 readme.workspace = true
@@ -12,6 +13,10 @@ keywords = [
     "cli",
     "puniyu",
     "puniyu-cli"
+]
+include = [
+    "src/",
+    "template/"
 ]
 
 [[bin]]
