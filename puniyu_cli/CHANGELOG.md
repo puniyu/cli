@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/puniyu/cli/compare/cli-v0.2.2...cli-v0.2.3) (2025-11-29)
+
+
+### ♻️ 代码重构
+
+* **cli:** 移除冗余的帮助子命令 ([3cb6ee2](https://github.com/puniyu/cli/commit/3cb6ee2f5a971a96f3e6edcf12c19d11c54ab8ae))
+
 ## [0.2.2](https://github.com/puniyu/cli/compare/cli-v0.2.1...cli-v0.2.2) (2025-11-29)
 
 
