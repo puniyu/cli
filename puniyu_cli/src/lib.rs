@@ -12,7 +12,7 @@ pub(crate) const HELP_TEMPLATE: &str = "{about-with-newline}\n使用方法:\n  {
 #[clap(author, version, about, long_about = None)]
 #[command(
     disable_help_subcommand = true,
-    help_template = HELP_TEMPLATE
+    help_template = "{about-with-newline}\n使用方法:\n  {usage}\n\n命令:\n{subcommands}\n选项:\n  -h, --help     显示帮助信息\n  -V, --version  显示版本信息\n"
 )]
 pub struct App {
     #[command(subcommand)]
@@ -23,8 +23,6 @@ pub struct App {
 enum Commands {
     /// 开发相关命令
     Dev(commands::dev::DevCommand),
-    /// 显示帮助信息
-    Help,
 }
 
 impl App {
@@ -35,8 +33,7 @@ impl App {
     {
         let app = Self::parse_from(args);
         match app.command {
-            Commands::Dev(dev_cmd) => dev_cmd.run(),
-            Commands::Help => Self::command().print_help().unwrap(),
+            Commands::Dev(dev_cmd) => dev_cmd.run()
         }
     }
 }
