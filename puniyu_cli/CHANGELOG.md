@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/puniyu/cli/compare/cli-v0.2.0...cli-v0.2.1) (2025-11-29)
+
+
+### 🔧 其他更新
+
+* **cli:** 重命名 CLI 工具为 cargo-puniyu ([817ed24](https://github.com/puniyu/cli/commit/817ed24176fec69344502174f24d1a3199fb57c6))
+
 ## [0.2.0](https://github.com/puniyu/cli/compare/cli-v0.1.3...cli-v0.2.0) (2025-11-29)
 
 
