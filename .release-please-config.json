@@ -68,7 +68,7 @@
       "release-type": "rust",
       "component": "cli"
     },
-    "piccy_cli_node": {
+    "puniyu_cli_node": {
       "release-type": "rust",
       "component": "node",
       "extra-files": [
