@@ -757,7 +757,7 @@ dependencies = [
 
 [[package]]
 name = "puniyu-cli"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "clap",
  "handlebars",
@@ -768,7 +768,7 @@ dependencies = [
 
 [[package]]
 name = "puniyu_cli_node"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "napi",
  "napi-build",

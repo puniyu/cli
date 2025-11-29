@@ -81,7 +81,7 @@ jobs:
       - name: 下载构建产物
         uses: dawidd6/action-download-artifact@ac66b43f0e6a346234dd65d4d0c8fbb31cb316e5 # v11
         with:
-          name: ^puniyu-cli-(x86_64|aarch64)-.*
+          name: ^cargo-puniyu-.*
           name_is_regexp: true
           skip_unpack: true
 
@@ -90,7 +90,7 @@ jobs:
         with:
           token: ${{ steps.app-token.outputs.token }}
           files: |
-            puniyu-cli-*
+            cargo-puniyu-*
           tag_name: ${{ needs.release.outputs.cli_tag_name }}
 
   publish-npm:

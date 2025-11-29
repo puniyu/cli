@@ -1,7 +1,6 @@
 mod create;
-use clap::{Args, Subcommand};
 use crate::HELP_TEMPLATE;
-
+use clap::{Args, Subcommand};
 
 #[derive(Args)]
 #[command(
@@ -26,4 +25,3 @@ pub enum Subcommands {
     /// 创建一个新的插件项目
     Create,
 }
-
