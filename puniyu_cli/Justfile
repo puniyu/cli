@@ -1,0 +1,5 @@
+set windows-shell := ["powershell.exe", "-c"]
+set shell := ["bash", "-cu"]
+
+build:
+    cargo build --release --bin puniyu-cli
