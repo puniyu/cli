@@ -1,0 +1,141 @@
+name: Build Node Package
+
+on:
+  workflow_call:
+
+env:
+  APP_NAME: puniyu-cli
+
+jobs:
+  build_windows:
+    runs-on: ${{ matrix.platform.runner }}
+    strategy:
+      matrix:
+        platform:
+          - runner: windows-latest
+            target: x86_64-pc-windows-msvc
+            label: windows-x86_64
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+
+      - name: 设置 rust
+        uses: puniyu/setup-rust@main
+        with:
+          save-cache: true
+          toolchain: ${{ matrix.platform.target }}
+          prefix-key: ${{ env.APP_NAME }}
+
+      - name: 配置 pnpm
+        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
+        with:
+          version: 10.24.0
+
+      - name: 构建
+        run: |
+          pnpm install
+          pnpm build --target ${{ matrix.platform.target }}
+        working-directory: puniyu_cli_node
+
+      - name: 上传构建产物
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: "${{ env.APP_NAME }}-node-${{ matrix.platform.label }}"
+          path: |
+            puniyu_cli_node/dist/${{ env.APP_NAME }}*.node
+
+  build_macos:
+    runs-on: ${{ matrix.platform.runner }}
+    strategy:
+      matrix:
+        platform:
+          - runner: macos-latest
+            target: x86_64-apple-darwin
+            label: macos-x86_64
+          - runner: macos-latest
+            target: aarch64-apple-darwin
+            label: macos-aarch64
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+
+      - name: 设置 rust
+        uses: puniyu/setup-rust@main
+        with:
+          save-cache: true
+          toolchain: ${{ matrix.platform.target }}
+          prefix-key: ${{ env.APP_NAME }}
+
+      - name: 配置 pnpm
+        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
+        with:
+          version: 10.24.0
+
+      - name: 构建
+        run: |
+          pnpm install
+          pnpm build --target ${{ matrix.platform.target }}
+        working-directory: puniyu_cli_node
+
+      - name: 上传构建产物
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: "${{ env.APP_NAME }}-node-${{ matrix.platform.label }}"
+          path: |
+            puniyu_cli_node/dist/${{ env.APP_NAME }}*.node
+
+  build_linux:
+    runs-on: ${{ matrix.platform.runner }}
+    container: ${{ matrix.platform.container }}
+    strategy:
+      matrix:
+        platform:
+          - runner: ubuntu-latest
+            target: x86_64-unknown-linux-gnu
+            label: linux-x86_64
+          - runner: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-gnu
+            label: linux-aarch64
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+
+      - name: 设置 rust
+        uses: puniyu/setup-rust@main
+        with:
+          save-cache: true
+          toolchain: ${{ matrix.platform.target }}
+          prefix-key: ${{ env.APP_NAME }}
+
+      - name: 配置 pnpm
+        uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4.2.0
+        with:
+          version: 10.24.0
+
+      - name: 构建
+        run: |
+          pnpm install
+          pnpm build --target ${{ matrix.platform.target }}
+        working-directory: puniyu_cli_node
+
+      - name: 上传构建产物
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: "${{ env.APP_NAME }}-node-${{ matrix.platform.label }}"
+          path: |
+            puniyu_cli_node/dist/${{ env.APP_NAME }}*.node
+
+
+      - name: 上传npm包
+        if: matrix.platform.label == 'linux-x86_64'
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: "npm-package"
+          path: |
+            puniyu_cli_node/dist/index.js
+            puniyu_cli_node/dist/index.d.ts
+            puniyu_cli_node/main.js
+            puniyu_cli_node/package.json

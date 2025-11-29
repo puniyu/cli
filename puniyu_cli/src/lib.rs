@@ -1,5 +1,5 @@
 mod command;
-pub mod template;
+mod template;
 
 
 
@@ -22,8 +22,12 @@ enum Commands  {
 }
 
 impl App {
-	pub fn run() {
-		let app = Self::parse();
+	pub fn run<I, T>(args: I)
+	where
+		I: IntoIterator<Item = T>,
+		T: Into<std::ffi::OsString> + Clone,
+	{
+		let app = Self::parse_from(args);
 		match app.dev {
 			Commands::Create => command::create::Command::run(),
 			Commands::Dev => command::dev::Command::run(),

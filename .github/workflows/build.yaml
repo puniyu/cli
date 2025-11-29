@@ -1,0 +1,117 @@
+name: Build Node Package
+
+on:
+  workflow_call:
+
+env:
+  APP_NAME: puniyu-cli
+
+jobs:
+  build_windows:
+    runs-on: ${{ matrix.platform.runner }}
+    strategy:
+      matrix:
+        platform:
+          - runner: windows-latest
+            target: x86_64-pc-windows-msvc
+            label: windows-x86_64
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+
+      - name: 设置 rust
+        uses: puniyu/setup-rust@main
+        with:
+          save-cache: true
+          toolchain: ${{ matrix.platform.target }}
+          prefix-key: ${{ env.APP_NAME }}
+
+      - name: 构建
+        run: |
+          cargo build --bin ${{ env.APP_NAME }} --release --target ${{ matrix.platform.target }}
+        working-directory: puniyu_cli
+
+      - name: 上传构建产物
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: "${{ env.APP_NAME }}-${{ matrix.platform.label }}"
+          path: |
+            target/${{ matrix.platform.target }}/release/${{ env.APP_NAME }}*
+            !target/${{ matrix.platform.target }}/release/${{ env.APP_NAME }}.pdb
+            !target/${{ matrix.platform.target }}/release/${{ env.APP_NAME }}.d
+
+  build_macos:
+    runs-on: ${{ matrix.platform.runner }}
+    strategy:
+      matrix:
+        platform:
+          - runner: macos-latest
+            target: x86_64-apple-darwin
+            label: macos-x86_64
+          - runner: macos-latest
+            target: aarch64-apple-darwin
+            label: macos-aarch64
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+
+      - name: 设置 rust
+        uses: puniyu/setup-rust@main
+        with:
+          save-cache: true
+          toolchain: ${{ matrix.platform.target }}
+          prefix-key: ${{ env.APP_NAME }}
+
+      - name: 构建
+        run: |
+          cargo build --bin ${{ env.APP_NAME }} --release --target ${{ matrix.platform.target }}
+        working-directory: puniyu_cli
+
+      - name: 上传构建产物
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: "${{ env.APP_NAME }}-${{ matrix.platform.label }}"
+          path: |
+            target/${{ matrix.platform.target }}/release/${{ env.APP_NAME }}*
+            !target/${{ matrix.platform.target }}/release/${{ env.APP_NAME }}.pdb
+            !target/${{ matrix.platform.target }}/release/${{ env.APP_NAME }}.d
+
+  build_linux:
+    runs-on: ${{ matrix.platform.runner }}
+    container: ${{ matrix.platform.container }}
+    strategy:
+      matrix:
+        platform:
+          - runner: ubuntu-latest
+            target: x86_64-unknown-linux-gnu
+            label: linux-x86_64
+          - runner: ubuntu-24.04-arm
+            target: aarch64-unknown-linux-gnu
+            label: linux-aarch64
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+
+      - name: 设置 rust
+        uses: puniyu/setup-rust@main
+        with:
+          save-cache: true
+          toolchain: ${{ matrix.platform.target }}
+          prefix-key: ${{ env.APP_NAME }}
+
+      - name: 构建
+        run: |
+          cargo build --bin ${{ env.APP_NAME }} --release --target ${{ matrix.platform.target }}
+        working-directory: puniyu_cli
+
+      - name: 上传构建产物
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
+        with:
+          name: "${{ env.APP_NAME }}-${{ matrix.platform.label }}"
+          path: |
+            target/${{ matrix.platform.target }}/release/${{ env.APP_NAME }}*
+            !target/${{ matrix.platform.target }}/release/${{ env.APP_NAME }}.pdb
+            !target/${{ matrix.platform.target }}/release/${{ env.APP_NAME }}.d
