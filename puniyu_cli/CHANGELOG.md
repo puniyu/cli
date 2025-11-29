@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/puniyu/cli/compare/cli-v0.1.3...cli-v0.2.0) (2025-11-29)
+
+
+### ✨ 新功能
+
+* **cli:** 添加开发命令和项目创建功能 ([3d01300](https://github.com/puniyu/cli/commit/3d01300618b262594dc4a0e2b1251e5f29bbc85e))
+
 ## [0.1.3](https://github.com/puniyu/cli/compare/cli-v0.1.2...cli-v0.1.3) (2025-11-29)
 
 
