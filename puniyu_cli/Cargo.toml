@@ -1,6 +1,6 @@
 [package]
 name = "puniyu-cli"
-version = "0.1.2"
+version = "0.1.1"
 description = "puniyu cli"
 authors.workspace = true
 license.workspace = true
