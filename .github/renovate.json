@@ -3,13 +3,25 @@
   "extends": [
     "github>puniyu/.github//.github/renovate"
   ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^puniyu_cli\\/template\\/Cargo\\.toml\\.template$/"
+      ],
+      "matchStrings": [
+        "(?<depName>puniyu_core|puniyu_plugin)\\s*=\\s*\\{\\s*version\\s*=\\s*\"(?<currentValue>\\d+\\.\\d+\\.\\d+)\"\\s*\\}"
+      ],
+      "datasourceTemplate": "crate"
+    }
+  ],
   "packageRules": [
     {
       "groupName": "puniyu",
-      "matchDatasources": [
-        "crate"
+      "matchManagers": [
+        "custom.regex"
       ],
-      "matchPackageNames": [
+      "matchDepNames": [
         "puniyu_core",
         "puniyu_plugin"
       ],
