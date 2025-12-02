@@ -8,8 +8,8 @@ rust-version = "1.88.0"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-puniyu_core = { version = "0.5.11" }
-puniyu_plugin = { version = "0.5.11" }
+puniyu_core = { version = "0.6.0" }
+puniyu_plugin = { version = "0.6.0" }
 
 
 [features]
