@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.4](https://github.com/puniyu/cli/compare/node-v0.2.3...node-v0.2.4) (2025-12-06)
+
+
+### 🔧 其他更新
+
+* **deps:** update dependency @napi-rs/cli to v3.5.0 ([#16](https://github.com/puniyu/cli/issues/16)) ([85b78e2](https://github.com/puniyu/cli/commit/85b78e24ff6aaf30e3c4023a4a10af280fdff95b))
+
 ## [0.2.3](https://github.com/puniyu/cli/compare/node-v0.2.2...node-v0.2.3) (2025-11-29)
 
 
