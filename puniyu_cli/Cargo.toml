@@ -20,11 +20,11 @@ include = [
 ]
 
 [[bin]]
-name = "cargo-puniyu"
+name = "puniyu-cli"
 path = "src/main.rs"
 
 [package.metadata.binstall]
-pkg-url = "{ repo }/releases/download/cli-v{ version }/cargo-puniyu-{ target }.{ archive-format }"
+pkg-url = "{ repo }/releases/download/cli-v{ version }/puniyu-cli-{ target }.{ archive-format }"
 bin-dir = "{ bin }{ binary-ext }"
 pkg-fmt = "zip"
 
