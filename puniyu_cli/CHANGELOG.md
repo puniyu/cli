@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.4](https://github.com/puniyu/cli/compare/cli-v0.2.3...cli-v0.2.4) (2026-01-03)
+
+
+### 🔧 其他更新
+
+* **deps:** update puniyu to 0.6.0 ([#18](https://github.com/puniyu/cli/issues/18)) ([0404e66](https://github.com/puniyu/cli/commit/0404e667516865d10c979f675ed3de7dc931ccb7))
+
+
+### ♻️ 代码重构
+
+* **cli:** 重命名 cargo-puniyu 为 puniyu-cli ([2401dec](https://github.com/puniyu/cli/commit/2401dec242e2b3972dfbb114a0f147c9044a57f4))
+
 ## [0.2.3](https://github.com/puniyu/cli/compare/cli-v0.2.2...cli-v0.2.3) (2025-11-29)
 
 
