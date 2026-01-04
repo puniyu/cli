@@ -38,9 +38,14 @@ impl Command {
         let cargo_toml = template.render();
         fs::write(project_path.join("Cargo.toml"), cargo_toml)?;
 
-        if let Some(lib_rs) = TEMPLATE_DIR.get_file("src/lib.rs") {
-            fs::write(project_path.join("src/lib.rs"), lib_rs.contents())?;
-        }
+        fs::write(
+            project_path.join("src/lib.rs"),
+            TEMPLATE_DIR
+                .get_file("rust/src/lib.rs")
+                .unwrap()
+                .contents_utf8()
+                .unwrap(),
+        )?;
 
         Ok(())
     }

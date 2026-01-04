@@ -1,7 +1,7 @@
 mod commands;
 mod template;
 
-use clap::{CommandFactory, Parser, Subcommand};
+use clap::{Parser, Subcommand};
 use include_dir::{Dir, include_dir};
 
 pub(crate) static TEMPLATE_DIR: Dir<'_> = include_dir!("$CARGO_MANIFEST_DIR/template");

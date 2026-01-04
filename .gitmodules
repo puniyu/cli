@@ -1,0 +1,3 @@
+[submodule "template/rust"]
+	path = template/rust
+	url = https://github.com/puniyu/puniyu-plugin-template-rust

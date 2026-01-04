@@ -3,6 +3,7 @@ members = [
     "puniyu_cli",
     "puniyu_cli_node"
 ]
+default-members = ["puniyu_cli"]
 resolver = "2"
 
 [workspace.package]
