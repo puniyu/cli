@@ -1,33 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "github>puniyu/.github//.github/renovate"
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": [
-        "/^puniyu_cli\\/template\\/Cargo\\.toml\\.template$/"
-      ],
-      "matchStrings": [
-        "(?<depName>puniyu_core|puniyu_plugin)\\s*=\\s*\\{\\s*version\\s*=\\s*\"(?<currentValue>\\d+\\.\\d+\\.\\d+)\"\\s*\\}"
-      ],
-      "datasourceTemplate": "crate"
-    }
-  ],
-  "packageRules": [
-    {
-      "groupName": "puniyu",
-      "matchManagers": [
-        "custom.regex"
-      ],
-      "matchDepNames": [
-        "puniyu_core",
-        "puniyu_plugin"
-      ],
-      "rangeStrategy": "auto",
-      "automerge": true,
-      "automergeType": "pr"
-    }
-  ]
+  "extends": ["github>puniyu/.github//.github/renovate"],
+  "packageRules": []
 }

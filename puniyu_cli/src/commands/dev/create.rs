@@ -37,11 +37,20 @@ impl Command {
         let template = options.build();
         let cargo_toml = template.render();
         fs::write(project_path.join("Cargo.toml"), cargo_toml)?;
+        let source_dir = project_path.join("src");
 
         fs::write(
-            project_path.join("src/lib.rs"),
+            source_dir.join("lib.rs"),
             TEMPLATE_DIR
                 .get_file("rust/src/lib.rs")
+                .unwrap()
+                .contents_utf8()
+                .unwrap(),
+        )?;
+        fs::write(
+            source_dir.join("command.rs"),
+            TEMPLATE_DIR
+                .get_file("rust/src/command.rs")
                 .unwrap()
                 .contents_utf8()
                 .unwrap(),
