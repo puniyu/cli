@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.3.0](https://github.com/puniyu/cli/compare/node-v0.2.3...node-v0.3.0) (2026-02-27)
+
+
+### 🔧 其他更新
+
+* **deps:** update dependency @napi-rs/cli to v3.5.0 ([#16](https://github.com/puniyu/cli/issues/16)) ([85b78e2](https://github.com/puniyu/cli/commit/85b78e24ff6aaf30e3c4023a4a10af280fdff95b))
+* **deps:** update dependency @napi-rs/cli to v3.5.1 ([#28](https://github.com/puniyu/cli/issues/28)) ([42d9211](https://github.com/puniyu/cli/commit/42d92117b83cdf00065e5fa2669b91556500e968))
+* **deps:** update dependency @types/node to v25 ([c394264](https://github.com/puniyu/cli/commit/c394264abbbd441b3c021166aec034c11d7d508e))
+
+
+### ♻️ 代码重构
+
+* **cli:** 重命名 cargo-puniyu 为 puniyu-cli ([2401dec](https://github.com/puniyu/cli/commit/2401dec242e2b3972dfbb114a0f147c9044a57f4))
+
 ## [0.2.3](https://github.com/puniyu/cli/compare/node-v0.2.2...node-v0.2.3) (2025-11-29)
 
 
