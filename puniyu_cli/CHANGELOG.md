@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.3.0](https://github.com/puniyu/cli/compare/cli-v0.2.3...cli-v0.3.0) (2026-03-14)
+
+
+### ✨ 新功能
+
+* **dev:** 创建项目时添加command.rs模板文件 ([820d4c4](https://github.com/puniyu/cli/commit/820d4c44416f5779a57a698d63f19858419ea804))
+* 添加 Rust 模板子模块和依赖项 ([fb52f9a](https://github.com/puniyu/cli/commit/fb52f9ab7f476bd08d2d3bc06dc048e6d50f37dc))
+
+
+### 🔧 其他更新
+
+* **deps:** update puniyu to 0.6.0 ([#18](https://github.com/puniyu/cli/issues/18)) ([0404e66](https://github.com/puniyu/cli/commit/0404e667516865d10c979f675ed3de7dc931ccb7))
+
+
+### ♻️ 代码重构
+
+* **cli:** 重命名 cargo-puniyu 为 puniyu-cli ([2401dec](https://github.com/puniyu/cli/commit/2401dec242e2b3972dfbb114a0f147c9044a57f4))
+
 ## [0.2.3](https://github.com/puniyu/cli/compare/cli-v0.2.2...cli-v0.2.3) (2025-11-29)
 
 
