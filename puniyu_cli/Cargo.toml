@@ -20,11 +20,11 @@ include = [
 ]
 
 [[bin]]
-name = "puniyu-cli"
+name = "puniyu"
 path = "src/main.rs"
 
 [package.metadata.binstall]
-pkg-url = "{ repo }/releases/download/cli-v{ version }/puniyu-cli-{ target }.{ archive-format }"
+pkg-url = "{ repo }/releases/download/cli-v{ version }/puniyu-{ target }.{ archive-format }"
 bin-dir = "{ bin }{ binary-ext }"
 pkg-fmt = "zip"
 
@@ -34,6 +34,9 @@ handlebars = "6.3.2"
 serde = { version = "1", features = ["derive"] }
 include_dir = "0.7.4"
 inquire = "0.9.1"
+derive_builder = "0.20.2"
+
+
 
 [build-dependencies]
 fs_extra = "1.3.0"

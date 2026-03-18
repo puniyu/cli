@@ -74,7 +74,7 @@ jobs:
 
       - name: 上传 crates-io
         run: |
-          cargo publish --package puniyu-cli
+          cargo publish --package puniyu
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CRATES_API_TOKEN }}
 
