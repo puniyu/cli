@@ -788,6 +788,7 @@ name = "puniyu-cli"
 version = "0.2.3"
 dependencies = [
  "clap",
+ "derive_builder",
  "fs_extra",
  "handlebars",
  "include_dir",
