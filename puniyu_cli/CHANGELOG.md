@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/puniyu/cli/compare/cli-v0.2.3...cli-v0.3.0) (2026-05-17)
+
+
+### ✨ 新功能
+
+* **cli:** 重构项目创建命令并更新工具名称 ([e69e426](https://github.com/puniyu/cli/commit/e69e4269d03d3c8a647638ca4f2ca3ff7f071277))
+
+
+### 🔧 其他更新
+
+* **deps:** update rust crates ([cbac9d4](https://github.com/puniyu/cli/commit/cbac9d49fc827598ae0aef4e3f46ac01d69e285e))
+
 ## [0.2.3](https://github.com/puniyu/cli/compare/cli-v0.2.2...cli-v0.2.3) (2025-11-29)
 
 
