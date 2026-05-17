@@ -23,7 +23,7 @@ jobs:
           submodules: 'recursive'
 
       - name: 设置 rust
-        uses: puniyu/setup-rust@d3e28f3d20e1894498b4cc2f37b780ab06edcda4 # main
+        uses: puniyu/setup-rust@7b6f487a6a88179b6513319b479a02b38f9195b0 # main
         with:
           save-cache: true
           target: ${{ matrix.platform.target }}
@@ -66,7 +66,7 @@ jobs:
           submodules: 'recursive'
 
       - name: 设置 rust
-        uses: puniyu/setup-rust@d3e28f3d20e1894498b4cc2f37b780ab06edcda4 # main
+        uses: puniyu/setup-rust@7b6f487a6a88179b6513319b479a02b38f9195b0 # main
         with:
           save-cache: true
           target: ${{ matrix.platform.target }}
@@ -110,7 +110,7 @@ jobs:
           submodules: 'recursive'
 
       - name: 设置 rust
-        uses: puniyu/setup-rust@d3e28f3d20e1894498b4cc2f37b780ab06edcda4 # main
+        uses: puniyu/setup-rust@7b6f487a6a88179b6513319b479a02b38f9195b0 # main
         with:
           save-cache: true
           target: ${{ matrix.platform.target }}
