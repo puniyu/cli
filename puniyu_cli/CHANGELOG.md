@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.4](https://github.com/puniyu/cli/compare/cli-v0.2.3...cli-v0.2.4) (2026-07-23)
+
+
+### 🔧 其他更新
+
+* **cli:** Synchronize puniyu-cli versions
+
 ## [0.2.3](https://github.com/puniyu/cli/compare/cli-v0.2.2...cli-v0.2.3) (2025-11-29)
 
 
