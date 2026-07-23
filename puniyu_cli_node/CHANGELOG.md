@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.2.4](https://github.com/puniyu/cli/compare/node-v0.2.3...node-v0.2.4) (2026-07-23)
+
+
+### 🔧 其他更新
+
+* **deps:** update dependency @napi-rs/cli to v3.7.0 ([#94](https://github.com/puniyu/cli/issues/94)) ([04ee47d](https://github.com/puniyu/cli/commit/04ee47da1aa970fe8770f380dba2db7dd8905d4b))
+* **deps:** update dependency @napi-rs/cli to v3.7.3 ([#134](https://github.com/puniyu/cli/issues/134)) ([67b39a9](https://github.com/puniyu/cli/commit/67b39a94209dc003ef71eea66bbfd2ed597bd627))
+* **deps:** update dependency @napi-rs/cli to v3.7.4 ([#141](https://github.com/puniyu/cli/issues/141)) ([3608432](https://github.com/puniyu/cli/commit/36084324de85e0f76b99ee7b0b21d3ca36f2b813))
+* **deps:** update node packages to v3.7.1 ([#109](https://github.com/puniyu/cli/issues/109)) ([84cc2a5](https://github.com/puniyu/cli/commit/84cc2a59a5300a43ddf35c88d4e228f8efc6f1c0))
+* **deps:** update node packages to v3.7.2 ([#111](https://github.com/puniyu/cli/issues/111)) ([d4dfcdf](https://github.com/puniyu/cli/commit/d4dfcdfb51905efe9303eb4a2014a1c51dd5fb24))
+
 ## [0.2.3](https://github.com/puniyu/cli/compare/node-v0.2.2...node-v0.2.3) (2025-11-29)
 
 
