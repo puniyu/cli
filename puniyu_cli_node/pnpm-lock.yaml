@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@napi-rs/cli':
         specifier: ^3.2.0
-        version: 3.9.1(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@25.0.2)
+        version: 3.10.3(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@25.0.2)
       '@types/node':
         specifier: ^25.0.0
         version: 25.0.2
@@ -169,8 +169,8 @@ packages:
       '@types/node':
         optional: true
 
-  '@napi-rs/cli@3.9.1':
-    resolution: {integrity: sha512-2DYBrM2j4n00L+O7fKAS38q19rVQK2HXz5RxSuJgFyZrd9TrdVQFmHOfqvqqsRIRBTZmqiMqBd/yzn4X1a23DQ==}
+  '@napi-rs/cli@3.10.3':
+    resolution: {integrity: sha512-RdHgxFNFUi7vSoLow7uqhigx6nhFBqe1nI8EL0hux66foc8wQ/4OL9WLlVRRkw+y67K7+BIHvYsEUn/cNpMsjA==}
     engines: {node: ^20.17.0 || ^22.13.0 || >= 23.5.0}
     hasBin: true
     peerDependencies:
@@ -570,8 +570,8 @@ packages:
   '@octokit/types@18.0.0':
     resolution: {integrity: sha512-l6bAF43PNxkJp6g+W4PjoUSSkxHomXw2nOum5CTftJz1NlV3vu93NImgOYtLf6CbBUb5j+fiuzW0PPQ5JTSvZA==}
 
-  '@tybys/wasm-util@0.10.3':
-    resolution: {integrity: sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg==}
+  '@tybys/wasm-util@0.10.4':
+    resolution: {integrity: sha512-W3c4gRigFS0T/Ma4qIYF3GDAc5AQdHb1yL5znJT1Zv1YaD9Kitx656wBjvr19qbiosmZT8lWDM5BEMynUqX65A==}
 
   '@types/node@25.0.2':
     resolution: {integrity: sha512-gWEkeiyYE4vqjON/+Obqcoeffmk0NF15WSBwSs7zwVA2bAbTaE0SJ7P0WNGoJn8uE7fiaV5a7dKYIJriEqOrmA==}
@@ -626,8 +626,8 @@ packages:
     resolution: {integrity: sha512-IKXpvIzjnC9XTAUbVBcMfGS0EPaIXtW6v+zr+RRp+hqULEpo0owZax6wyRwPOJbWbzjYspQwusTsfVr0ifh4uQ==}
     engines: {node: '>=0.10.0'}
 
-  js-yaml@5.4.1:
-    resolution: {integrity: sha512-28R/k+NAjeuf7+CKlTxWZVExJGwVVLwY06DgEnOMz2gEpfNkDcD7QvyiVPT0xy0XXhU8vHsd4Ot42OOPdJG7dQ==}
+  js-yaml@5.4.2:
+    resolution: {integrity: sha512-m+aqu+LwO1O6sIopafj8HUVl5aawITwZQe/yHpMCKjaWBaA/d07B/QdMb3529REftiU+RMMHL3Vlsw3hON7vWg==}
     hasBin: true
 
   json-with-bigint@3.5.12:
@@ -640,8 +640,8 @@ packages:
     resolution: {integrity: sha512-dkEJPVvun4FryqBmZ5KhDo0K9iDXAwn08tMLDinNdRBNPcYEDiWYysLcc6k3mjTMlbP9KyylvRpd4wFtwrT9rw==}
     engines: {node: ^20.17.0 || >=22.9.0}
 
-  obug@2.2.1:
-    resolution: {integrity: sha512-XrsrhT5sybtKI6wakr2SPOlGZWWYbUXZ7a0jT8/QOeAPau+1X/bSegNe5YR75oJmEZQbKningirmGOEJCIk61Q==}
+  obug@3.0.0:
+    resolution: {integrity: sha512-5vvB5+W7ePv+p3uqxi+RcW1XAzLW0/hxt3/4X4Lc4qHudzOhmBiBwOY6DRob4WnanAEGvNcLjF+KNOufrUoEQw==}
     engines: {node: '>=12.20.0'}
 
   safer-buffer@2.1.2:
@@ -826,7 +826,7 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.0.2
 
-  '@napi-rs/cli@3.9.1(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@25.0.2)':
+  '@napi-rs/cli@3.10.3(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@25.0.2)':
     dependencies:
       '@inquirer/prompts': 8.7.2(@types/node@25.0.2)
       '@napi-rs/cross-toolchain': 1.0.3
@@ -835,8 +835,8 @@ snapshots:
       clipanion: 4.0.0-rc.4(typanion@3.14.0)
       colorette: 2.0.20
       es-toolkit: 1.52.0
-      js-yaml: 5.4.1
-      obug: 2.2.1
+      js-yaml: 5.4.2
+      obug: 3.0.0
       semver: 7.8.5
       typanion: 3.14.0
       typescript: 6.0.3
@@ -1015,14 +1015,14 @@ snapshots:
     dependencies:
       '@emnapi/core': 1.11.2
       '@emnapi/runtime': 1.11.2
-      '@tybys/wasm-util': 0.10.3
+      '@tybys/wasm-util': 0.10.4
     optional: true
 
   '@napi-rs/wasm-runtime@1.2.4(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)':
     dependencies:
       '@emnapi/core': 1.9.2
       '@emnapi/runtime': 1.9.2
-      '@tybys/wasm-util': 0.10.3
+      '@tybys/wasm-util': 0.10.4
     optional: true
 
   '@napi-rs/wasm-tools-android-arm-eabi@1.1.0':
@@ -1153,7 +1153,7 @@ snapshots:
     dependencies:
       '@octokit/openapi-types': 29.0.1
 
-  '@tybys/wasm-util@0.10.3':
+  '@tybys/wasm-util@0.10.4':
     dependencies:
       tslib: 2.8.1
     optional: true
@@ -1198,7 +1198,7 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  js-yaml@5.4.1:
+  js-yaml@5.4.2:
     dependencies:
       argparse: 2.0.1
 
@@ -1208,7 +1208,7 @@ snapshots:
 
   mute-stream@3.0.0: {}
 
-  obug@2.2.1: {}
+  obug@3.0.0: {}
 
   safer-buffer@2.1.2: {}
 
