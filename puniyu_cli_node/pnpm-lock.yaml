@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@napi-rs/cli':
         specifier: ^3.2.0
-        version: 3.10.3(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@25.0.2)
+        version: 3.10.4(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@25.0.2)
       '@types/node':
         specifier: ^25.0.0
         version: 25.0.2
@@ -169,8 +169,8 @@ packages:
       '@types/node':
         optional: true
 
-  '@napi-rs/cli@3.10.3':
-    resolution: {integrity: sha512-RdHgxFNFUi7vSoLow7uqhigx6nhFBqe1nI8EL0hux66foc8wQ/4OL9WLlVRRkw+y67K7+BIHvYsEUn/cNpMsjA==}
+  '@napi-rs/cli@3.10.4':
+    resolution: {integrity: sha512-7yvXpu/m4p1Re1/DViAooSYAyivYEhqDrjuq66a6haXLEAKrZSzndG7B850g1irngI1pAdZS5xL4tsu0xQ8P9Q==}
     engines: {node: ^20.17.0 || ^22.13.0 || >= 23.5.0}
     hasBin: true
     peerDependencies:
@@ -597,8 +597,8 @@ packages:
   colorette@2.0.20:
     resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
 
-  content-type@3.1.0:
-    resolution: {integrity: sha512-z26wZR7iXahgpSK7XgnB4IbRVmUNSODvsX9qC9TAru7AcWGiqn5YKy+OH3PLRrwyAnewykKhCqnD+VV3a8uT8Q==}
+  content-type@3.1.1:
+    resolution: {integrity: sha512-GW4qUsfFo59d0HbUibDlWv5wPz+vAAcaTWbKIuKCf0JkC7wWkSyf8f13IpXn5JkeMlB2P8iTSSIjwXljorg2vA==}
     engines: {node: '>=22'}
 
   debug@4.4.3:
@@ -826,7 +826,7 @@ snapshots:
     optionalDependencies:
       '@types/node': 25.0.2
 
-  '@napi-rs/cli@3.10.3(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@25.0.2)':
+  '@napi-rs/cli@3.10.4(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)(@types/node@25.0.2)':
     dependencies:
       '@inquirer/prompts': 8.7.2(@types/node@25.0.2)
       '@napi-rs/cross-toolchain': 1.0.3
@@ -1134,7 +1134,7 @@ snapshots:
       '@octokit/endpoint': 11.0.5
       '@octokit/request-error': 7.1.2
       '@octokit/types': 18.0.0
-      content-type: 3.1.0
+      content-type: 3.1.1
       json-with-bigint: 3.5.12
       universal-user-agent: 7.0.3
 
@@ -1176,7 +1176,7 @@ snapshots:
 
   colorette@2.0.20: {}
 
-  content-type@3.1.0: {}
+  content-type@3.1.1: {}
 
   debug@4.4.3:
     dependencies:
