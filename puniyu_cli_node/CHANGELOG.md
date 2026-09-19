@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.2.4](https://github.com/puniyu/cli/compare/node-v0.2.3...node-v0.2.4) (2026-09-19)
+
+
+### 🔧 其他更新
+
+* **deps:** update dependency @napi-rs/cli to v3.10.3 ([#197](https://github.com/puniyu/cli/issues/197)) ([577259f](https://github.com/puniyu/cli/commit/577259fffaade081a5c2f29769a4dc6bb835488b))
+* **deps:** update dependency @napi-rs/cli to v3.10.4 ([#199](https://github.com/puniyu/cli/issues/199)) ([7081de8](https://github.com/puniyu/cli/commit/7081de8bf3667c4b14e8b6c96bc6ca6fb1535ef6))
+* **deps:** update dependency @napi-rs/cli to v3.8.1 ([#149](https://github.com/puniyu/cli/issues/149)) ([e0659b9](https://github.com/puniyu/cli/commit/e0659b9716a5fd5d143abdcc2fa249e17530fbc8))
+* **deps:** update dependency @napi-rs/cli to v3.8.2 ([#151](https://github.com/puniyu/cli/issues/151)) ([16ef0f7](https://github.com/puniyu/cli/commit/16ef0f70c90411904672897167bd36f0ec987179))
+* **deps:** update dependency @napi-rs/cli to v3.8.3 ([#160](https://github.com/puniyu/cli/issues/160)) ([72cf4a5](https://github.com/puniyu/cli/commit/72cf4a501b96e2f89d3632531b548d8fc9a61d0e))
+* **deps:** update dependency @napi-rs/cli to v3.8.4 ([#161](https://github.com/puniyu/cli/issues/161)) ([d615c7c](https://github.com/puniyu/cli/commit/d615c7c0b0e3566c107eb1f2e8c0be61821686e4))
+* **deps:** update dependency @napi-rs/cli to v3.8.5 ([#162](https://github.com/puniyu/cli/issues/162)) ([f588530](https://github.com/puniyu/cli/commit/f5885306de8140e06838cb34b99dcde0ac9e6e92))
+* **deps:** update dependency @napi-rs/cli to v3.8.6 ([#163](https://github.com/puniyu/cli/issues/163)) ([edb8506](https://github.com/puniyu/cli/commit/edb85065ed1586c715f4bbde16f16ae661649763))
+* **deps:** update dependency @napi-rs/cli to v3.9.0 ([#182](https://github.com/puniyu/cli/issues/182)) ([79a3246](https://github.com/puniyu/cli/commit/79a324601720aeb7118c0f3d5bd0a1d4f912cbfa))
+* **deps:** update dependency @napi-rs/cli to v3.9.1 ([#192](https://github.com/puniyu/cli/issues/192)) ([e8efa29](https://github.com/puniyu/cli/commit/e8efa29f533e1516174aa16b675c6f6f133a7a7d))
+
 ## [0.2.3](https://github.com/puniyu/cli/compare/node-v0.2.2...node-v0.2.3) (2025-11-29)
 
 
