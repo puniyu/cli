@@ -27,7 +27,7 @@ jobs:
       node_tag_name: ${{ steps.release-please.outputs['puniyu_cli_node--tag_name'] }}
     steps:
       - name: 获取token
-        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
         id: app-token
         with:
           app-id: ${{ secrets.APP_ID }}
@@ -54,7 +54,7 @@ jobs:
     if: ${{ needs.release.outputs.cli }}
     steps:
       - name: 获取token
-        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
         id: app-token
         with:
           app-id: ${{ secrets.APP_ID }}
@@ -67,7 +67,7 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
 
       - name: 设置 rust
-        uses: puniyu/setup-rust@9c9edfa6689a9c0e20ddea70bff5adaf5b946f28 # main
+        uses: puniyu/setup-rust@b1c0e092ddf502e5aa0382a5447bdde63d9ba7bd # main
         with:
           save-cache: true
           prefix-key: ${{ env.APP_NAME }}
@@ -99,7 +99,7 @@ jobs:
     if: ${{ needs.release.outputs.node }}
     steps:
       - name: 获取token
-        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
         id: app-token
         with:
           app-id: ${{ secrets.APP_ID }}
